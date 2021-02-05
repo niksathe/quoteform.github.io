@@ -1,0 +1,45 @@
+/**************************************************
+Fixes the blank space at the bottom of the quote page in Firefox
+ -- It used to do that but now therejust this no requirement since the affected Html was moved instead.
+ -- retained the page for reference purposes but no longer used or rendered
+ -- Was rendered at the bottom of the Quote/Index.cshtml page thusly:
+       
+    @section pageSpecificCSS{
+
+    @Styles.Render("~/bundles/quotepage") 
+
+}
+**************************************************
+
+@-moz-document url-prefix(http://localhost:64812/), url-prefix(http://localhost:54178/), url-prefix(http://confusedlifetest2.directlife.co.uk/), url-prefix(https://confusedlifetest2.directlife.co.uk/), url-prefix(https://life.confused.com/) { 
+            
+    
+    }
+}
+
+*/
+
+.about-quote-plus {    visibility: hidden;    display: none;}
+label.error2, span.error2, .qp-errors { color: red; /*font-weight:bold;*/ }
+
+input[name*="Term"],input[name*="height-1"],input[name*="weight-1"],
+input[name*="Applicant1.DailySmokingAmount"],input[name*="Applicant1.YearsSinceSmoked"], 
+input[name*="Applicant2.DailySmokingAmount"],input[name*="Applicant2.YearsSinceSmoked"],
+input[name*="Applicant1.QuestionSet[10].AnswerValue"],input[name*="Applicant2.QuestionSet[10].AnswerValue"],
+input[name*="height-2"],input[name*="weight-2"],input[name="Applicant1.QuestionSet[11].AnswerValue"],
+input[name="Applicant1.QuestionSet[12].AnswerValue"],input[name="Applicant2.QuestionSet[11].AnswerValue"],
+input[name="Applicant2.QuestionSet[12].AnswerValue"]
+ {
+     width:42px;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+/*@media all and (max-width:600px) {input[name*="Term"] { padding-left:2px; }}*/
+

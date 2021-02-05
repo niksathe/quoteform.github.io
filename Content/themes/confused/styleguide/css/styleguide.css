@@ -1,0 +1,2164 @@
+html {
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Trebuchet MS',Trebuchet,sans-serif;
+    font-size: 62.5%;
+    line-height: 1.6em;
+    margin:0;
+    color:#444;
+}
+
+hr {
+    clear:left;
+    display: block;
+    height: 20px;
+    border: 0;
+    border-bottom: 1px solid #CCC;
+    margin: 0 20px;
+    padding: 0;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+
+/*====================================================================
+Links
+======================================================================*/
+
+a {
+    color:#126cb1;
+    text-decoration:none;
+}
+
+a:visited {
+    color:#126cb1;
+}
+
+a:hover {
+    color:#01CDFF;
+    text-decoration:underline;
+}
+
+
+/*====================================================================
+Misc & Non-semantic helper classes
+======================================================================*/
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visually-hidden {
+    border: 0; clip: rect(0 0 0 0);
+    height: 1px; margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clear {
+    clear:both;
+}
+
+.right {
+    float:right;
+}
+
+.left {
+    float:left;
+}
+
+/*====================================================================
+buttons.css
+======================================================================
+
+@name           Confused.com Stylguide
+@author         Red Bullet <support@redbullet.co.uk>
+@copyright      Red Bullet 2012
+@description    All the buttons
+
+======================================================================
+Contents
+======================================================================
+
+- Default (Light Blue)
+- Primary (Green)
+- Secondary (Bright Blue)
+- Sizing
+- Helpers
+
+/*====================================================================
+Default (Light Blue)
+======================================================================*/
+
+/* This is the base class that all buttons should have */
+.btn,
+.btn:visited {
+    border: 1px solid #ADD0DC;
+    color:#126cb1;
+    display:inline-block; /* If buttons need to be completely flush, remove whitespace between them in HTML */
+    margin-left:20px;
+    margin-top:20px; /* Can't use ems as we're changing the font size */
+    font-family: 'Trebuchet MS', Trebuchet, sans-serif;
+
+    box-shadow:0 1px 2px #FFFFFF inset;
+    border-radius:3px; 
+
+    background: #DDFBFF; 
+    background: -webkit-linear-gradient(bottom, #CCF8FF 0%, #EFFAFC 85%);
+    background: linear-gradient(to top, #CCF8FF 0%, #EFFAFC 85%);
+    
+    -webkit-transition-property: box-shadow, color;
+    -webkit-transition: 0.1s ease-in;
+    transition-property: box-shadow, color;
+    transition: 0.1s ease-in;
+}
+
+.btn:hover {
+    color:#126cb1;
+    text-decoration:none;
+    box-shadow:0 1px 2px #FFFFFF inset, 0px 1px 3px rgba(0,0,0,0.15);
+    background: #FFF;
+    background-image: -webkit-linear-gradient(bottom, #E8FCFF 0%, #F4FBFC 85%);
+    background-image: linear-gradient(to top, #E8FCFF 0%, #F4FBFC 85%);
+}
+
+.btn:active,
+.btn:focus {
+    border-color:#11CDFF;
+    box-shadow:0px 1px 0px rgba(255,255,255,0.4);
+}
+
+.btn[disabled],
+.btn[disabled]:hover,
+.btn[disabled]:focus,
+.btn[disabled]:active  {
+    cursor:default;
+    color: #999;
+    background:#eee;
+    box-shadow:none;
+    border-color:#ddd;
+}
+
+/*====================================================================
+Primary (Green)
+======================================================================*/
+
+.btn-primary,
+.btn-primary:visited {
+    border: 1px solid #057730;
+    color:#FFF;   
+    border-radius:3px;  
+    box-shadow:0 1px 2px #FFFFFF inset, 0px 1px 3px rgba(0,0,0,0.15);
+    background: #3C8400;
+    background: -webkit-linear-gradient(top, #55BC01 0%,#3C8400 100%);
+    background: linear-gradient(to bottom, #55BC01 0%,#3C8400 100%); 
+    
+} 
+
+.btn-primary:hover {
+    border: 1px solid #057730;
+    color:#FFF;
+    text-decoration:none;
+    box-shadow:0 1px 2px #FFFFFF inset, 0px 1px 3px rgba(0,0,0,0.15); 
+    background:  #4fb001; 
+    background: -webkit-linear-gradient(top, #8bdc1e 0%,#4fb001 100%); 
+    background: linear-gradient(to bottom, #8bdc1e 0%,#4fb001 100%); 
+}
+
+.btn-primary:active, 
+.btn-primary:focus {    
+    border: 1px solid #057730;
+    box-shadow:0 1px 2px #FFFFFF inset, 0px 1px 3px rgba(0,0,0,0.15);
+}
+
+
+/*====================================================================
+Secondary (Bright Blue)
+======================================================================*/
+
+.btn-secondary,
+.btn-secondary:visited {
+    border:1px solid #049AB5;
+    color:#fff;
+    border-radius: 3px;
+    box-shadow:0 1px 2px #FFFFFF inset, 0px 1px 3px rgba(0,0,0,0.15);
+    background: #008299;
+    background: -webkit-linear-gradient(top, #04A9C6 0%,#008299 85%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(to bottom, #04A9C6 0%,#008299 85%); /* W3C */
+
+}
+
+.btn-secondary:hover {
+    border:1px solid #049AB5;
+    color:#fff;
+    text-decoration:none;
+    
+    box-shadow:0 1px 2px #FFFFFF inset, 0px 1px 3px rgba(0,0,0,0.3);
+    
+    background: #45daff; /* Old browsers */
+    background: -webkit-linear-gradient(top, #45daff 0%,#049ab5 85%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(to bottom, #45daff 0%,#049ab5 85%); /* W3C */
+}
+
+.btn-secondary:active,
+.btn-secondary:focus {    
+    border:1px solid #049AB5;
+    box-shadow:0 1px 2px #FFFFFF inset, 0px 1px 3px rgba(0,0,0,0.15);
+}
+
+
+/*====================================================================
+Sizing
+======================================================================*/
+
+/* Needs to go first for inheritance as all buttons use this class */
+.btn {
+    font-size:1.6em;
+    padding:0.5em 1.5em;
+    vertical-align: middle;
+}
+
+.btn-large {
+    font-size:2em;
+}
+
+.btn-small {
+    font-size:1.2em;
+}
+
+.btn-inline {
+    font-size:1em;
+    margin:0;
+    vertical-align:inherit;
+}
+
+
+/* x-browser */
+
+.ie6 .btn {
+    padding: 5px 15px;
+}
+
+/*====================================================================
+Plain - positioned here so it overrides padding from sizes
+======================================================================*/
+
+.btn-plain {
+    padding-left:0;
+    padding-right:0;
+}
+
+.btn-plain,
+.btn-plain:hover,
+.btn-plain:focus,
+.btn-plain:active {
+    background:none;
+    border:1px solid transparent;
+    border-radius: 0;
+
+    /* CSS3 Animation: property duration timing-function delay */
+    -webkit-transition: none;
+    transition: none;
+    box-shadow: none;
+
+    text-shadow:none;
+    opacity:0.9;   
+}
+
+.btn-plain:hover {
+    opacity:1;
+}
+
+/* x-browser */
+
+.ie6 .btn-plain {
+    border:none;
+}
+
+/*====================================================================
+icons.css
+======================================================================
+
+@name           Confused.com Stylguide
+@author         Red Bullet <support@redbullet.co.uk>
+@copyright      Red Bullet 2012
+@description    Icons
+
+======================================================================
+Contents
+======================================================================
+
+- Font
+- Sizing
+- Icon Positioning
+- Icon Classes
+
+/*====================================================================
+Font
+======================================================================*/
+
+@font-face {
+font-family: 'FontAwesome';
+src: url('../fonts/fontawesome/fontawesome-webfont.eot');
+src: url('../fonts/fontawesome/fontawesome-webfont%EF%B9%96.eot#iefix') format('eot'),
+     url('../fonts/fontawesome/fontawesome-webfont.woff') format('woff'),
+     url('../fonts/fontawesome/fontawesome-webfont.ttf') format('truetype'),
+     url('../fonts/fontawesome/fontawesome-webfont.otf.html') format('opentype'),
+     url('../fonts/fontawesome/fontawesome-webfont.svg#FontAwesome') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+/*====================================================================
+Sizing
+======================================================================*/
+
+.icon {
+    font-style:normal;
+    font-size:1em;
+    display: inline-block;
+    margin:0 0.3em 0 0;
+    vertical-align: middle;
+}
+
+.icon-right {
+    margin:0 0 0 0.3em;
+}
+
+.ie7 .icon-right {
+  margin: 0 -15px 0 15px;
+}
+
+
+/* Add extra margin as no padding on plain buttons */
+.btn-plain .icon-right {
+    margin:0 0 0 0.6em;
+}
+
+.btn-plain .icon {
+    margin:0 0.6em 0 0;
+}
+
+/*====================================================================
+Icon Positioning
+======================================================================*/
+
+/*  Font Awesome styles  */
+.icon:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    text-decoration: none;
+    margin-left:0.5em;
+}
+
+/*====================================================================
+Icon Classes
+======================================================================*/
+
+/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+    readers do not read off random characters that represent icons */
+.icon-glass:before                { content: "\f000"; }
+.icon-music:before                { content: "\f001"; }
+.icon-search:before               { content: "\f002"; }
+.icon-envelope:before             { content: "\f003"; }
+.icon-heart:before                { content: "\f004"; }
+.icon-star:before                 { content: "\f005"; }
+.icon-star-empty:before           { content: "\f006"; }
+.icon-user:before                 { content: "\f007"; }
+.icon-film:before                 { content: "\f008"; }
+.icon-th-large:before             { content: "\f009"; }
+.icon-th:before                   { content: "\f00a"; }
+.icon-th-list:before              { content: "\f00b"; }
+.icon-ok:before                   { content: "\f00c"; }
+.icon-remove:before               { content: "\f00d"; }
+.icon-zoom-in:before              { content: "\f00e"; }
+
+.icon-zoom-out:before             { content: "\f010"; }
+.icon-off:before                  { content: "\f011"; }
+.icon-signal:before               { content: "\f012"; }
+.icon-cog:before                  { content: "\f013"; }
+.icon-trash:before                { content: "\f014"; }
+.icon-home:before                 { content: "\f015"; }
+.icon-file:before                 { content: "\f016"; }
+.icon-time:before                 { content: "\f017"; }
+.icon-road:before                 { content: "\f018"; }
+.icon-download-alt:before         { content: "\f019"; }
+.icon-download:before             { content: "\f01a"; }
+.icon-upload:before               { content: "\f01b"; }
+.icon-inbox:before                { content: "\f01c"; }
+.icon-play-circle:before          { content: "\f01d"; }
+.icon-repeat:before               { content: "\f01e"; }
+
+/* \f020 is not a valid unicode character. all shifted one down */
+.icon-refresh:before              { content: "\f021"; }
+.icon-list-alt:before             { content: "\f022"; }
+.icon-lock:before                 { content: "\f023"; }
+.icon-flag:before                 { content: "\f024"; }
+.icon-headphones:before           { content: "\f025"; }
+.icon-volume-off:before           { content: "\f026"; }
+.icon-volume-down:before          { content: "\f027"; }
+.icon-volume-up:before            { content: "\f028"; }
+.icon-qrcode:before               { content: "\f029"; }
+.icon-barcode:before              { content: "\f02a"; }
+.icon-tag:before                  { content: "\f02b"; }
+.icon-tags:before                 { content: "\f02c"; }
+.icon-book:before                 { content: "\f02d"; }
+.icon-bookmark:before             { content: "\f02e"; }
+.icon-print:before                { content: "\f02f"; }
+
+.icon-camera:before               { content: "\f030"; }
+.icon-font:before                 { content: "\f031"; }
+.icon-bold:before                 { content: "\f032"; }
+.icon-italic:before               { content: "\f033"; }
+.icon-text-height:before          { content: "\f034"; }
+.icon-text-width:before           { content: "\f035"; }
+.icon-align-left:before           { content: "\f036"; }
+.icon-align-center:before         { content: "\f037"; }
+.icon-align-right:before          { content: "\f038"; }
+.icon-align-justify:before        { content: "\f039"; }
+.icon-list:before                 { content: "\f03a"; }
+.icon-indent-left:before          { content: "\f03b"; }
+.icon-indent-right:before         { content: "\f03c"; }
+.icon-facetime-video:before       { content: "\f03d"; }
+.icon-picture:before              { content: "\f03e"; }
+
+.icon-pencil:before               { content: "\f040"; }
+.icon-map-marker:before           { content: "\f041"; }
+.icon-adjust:before               { content: "\f042"; }
+.icon-tint:before                 { content: "\f043"; }
+.icon-edit:before                 { content: "\f044"; }
+.icon-share:before                { content: "\f045"; }
+.icon-check:before                { content: "\f046"; }
+.icon-move:before                 { content: "\f047"; }
+.icon-step-backward:before        { content: "\f048"; }
+.icon-fast-backward:before        { content: "\f049"; }
+.icon-backward:before             { content: "\f04a"; }
+.icon-play:before                 { content: "\f04b"; }
+.icon-pause:before                { content: "\f04c"; }
+.icon-stop:before                 { content: "\f04d"; }
+.icon-forward:before              { content: "\f04e"; }
+
+.icon-fast-forward:before         { content: "\f050"; }
+.icon-step-forward:before         { content: "\f051"; }
+.icon-eject:before                { content: "\f052"; }
+.icon-chevron-left:before         { content: "\f053"; }
+.icon-chevron-right:before        { content: "\f054"; }
+.icon-plus-sign:before            { content: "\f055"; }
+.icon-minus-sign:before           { content: "\f056"; }
+.icon-remove-sign:before          { content: "\f057"; }
+.icon-ok-sign:before              { content: "\f058"; }
+.icon-question-sign:before        { content: "\f059"; }
+.icon-info-sign:before            { content: "\f05a"; }
+.icon-screenshot:before           { content: "\f05b"; }
+.icon-remove-circle:before        { content: "\f05c"; }
+.icon-ok-circle:before            { content: "\f05d"; }
+.icon-ban-circle:before           { content: "\f05e"; }
+
+.icon-arrow-left:before           { content: "\f060"; }
+.icon-arrow-right:before          { content: "\f061"; }
+.icon-arrow-up:before             { content: "\f062"; }
+.icon-arrow-down:before           { content: "\f063"; }
+.icon-share-alt:before            { content: "\f064"; }
+.icon-resize-full:before          { content: "\f065"; }
+.icon-resize-small:before         { content: "\f066"; }
+.icon-plus:before                 { content: "\f067"; }
+.icon-minus:before                { content: "\f068"; }
+.icon-asterisk:before             { content: "\f069"; }
+.icon-exclamation-sign:before     { content: "\f06a"; }
+.icon-gift:before                 { content: "\f06b"; }
+.icon-leaf:before                 { content: "\f06c"; }
+.icon-fire:before                 { content: "\f06d"; }
+.icon-eye-open:before             { content: "\f06e"; }
+
+.icon-eye-close:before            { content: "\f070"; }
+.icon-warning-sign:before         { content: "\f071"; }
+.icon-plane:before                { content: "\f072"; }
+.icon-calendar:before             { content: "\f073"; }
+.icon-random:before               { content: "\f074"; }
+.icon-comment:before              { content: "\f075"; }
+.icon-magnet:before               { content: "\f076"; }
+.icon-chevron-up:before           { content: "\f077"; }
+.icon-chevron-down:before         { content: "\f078"; }
+.icon-retweet:before              { content: "\f079"; }
+.icon-shopping-cart:before        { content: "\f07a"; }
+.icon-folder-close:before         { content: "\f07b"; }
+.icon-folder-open:before          { content: "\f07c"; }
+.icon-resize-vertical:before      { content: "\f07d"; }
+.icon-resize-horizontal:before    { content: "\f07e"; }
+
+.icon-bar-chart:before            { content: "\f080"; }
+.icon-twitter-sign:before         { content: "\f081"; }
+.icon-facebook-sign:before        { content: "\f082"; }
+.icon-camera-retro:before         { content: "\f083"; }
+.icon-key:before                  { content: "\f084"; }
+.icon-cogs:before                 { content: "\f085"; }
+.icon-comments:before             { content: "\f086"; }
+.icon-thumbs-up:before            { content: "\f087"; }
+.icon-thumbs-down:before          { content: "\f088"; }
+.icon-star-half:before            { content: "\f089"; }
+.icon-heart-empty:before          { content: "\f08a"; }
+.icon-signout:before              { content: "\f08b"; }
+.icon-linkedin-sign:before        { content: "\f08c"; }
+.icon-pushpin:before              { content: "\f08d"; }
+.icon-external-link:before        { content: "\f08e"; }
+
+.icon-signin:before               { content: "\f090"; }
+.icon-trophy:before               { content: "\f091"; }
+.icon-github-sign:before          { content: "\f092"; }
+.icon-upload-alt:before           { content: "\f093"; }
+.icon-lemon:before                { content: "\f094"; }
+.icon-phone:before                { content: "\f095"; }
+.icon-check-empty:before          { content: "\f096"; }
+.icon-bookmark-empty:before       { content: "\f097"; }
+.icon-phone-sign:before           { content: "\f098"; }
+.icon-twitter:before              { content: "\f099"; }
+.icon-facebook:before             { content: "\f09a"; }
+.icon-github:before               { content: "\f09b"; }
+.icon-unlock:before               { content: "\f09c"; }
+.icon-credit-card:before          { content: "\f09d"; }
+.icon-rss:before                  { content: "\f09e"; }
+
+.icon-hdd:before                  { content: "\f0a0"; }
+.icon-bullhorn:before             { content: "\f0a1"; }
+.icon-bell:before                 { content: "\f0a2"; }
+.icon-certificate:before          { content: "\f0a3"; }
+.icon-hand-right:before           { content: "\f0a4"; }
+.icon-hand-left:before            { content: "\f0a5"; }
+.icon-hand-up:before              { content: "\f0a6"; }
+.icon-hand-down:before            { content: "\f0a7"; }
+.icon-circle-arrow-left:before    { content: "\f0a8"; }
+.icon-circle-arrow-right:before   { content: "\f0a9"; }
+.icon-circle-arrow-up:before      { content: "\f0aa"; }
+.icon-circle-arrow-down:before    { content: "\f0ab"; }
+.icon-globe:before                { content: "\f0ac"; }
+.icon-wrench:before               { content: "\f0ad"; }
+.icon-tasks:before                { content: "\f0ae"; }
+
+.icon-filter:before               { content: "\f0b0"; }
+.icon-briefcase:before            { content: "\f0b1"; }
+.icon-fullscreen:before           { content: "\f0b2"; }
+
+.icon-group:before                { content: "\f0c0"; }
+.icon-link:before                 { content: "\f0c1"; }
+.icon-cloud:before                { content: "\f0c2"; }
+.icon-beaker:before               { content: "\f0c3"; }
+.icon-cut:before                  { content: "\f0c4"; }
+.icon-copy:before                 { content: "\f0c5"; }
+.icon-paper-clip:before           { content: "\f0c6"; }
+.icon-save:before                 { content: "\f0c7"; }
+.icon-sign-blank:before           { content: "\f0c8"; }
+.icon-reorder:before              { content: "\f0c9"; }
+.icon-list-ul:before              { content: "\f0ca"; }
+.icon-list-ol:before              { content: "\f0cb"; }
+.icon-strikethrough:before        { content: "\f0cc"; }
+.icon-underline:before            { content: "\f0cd"; }
+.icon-table:before                { content: "\f0ce"; }
+
+.icon-magic:before                { content: "\f0d0"; }
+.icon-truck:before                { content: "\f0d1"; }
+.icon-pinterest:before            { content: "\f0d2"; }
+.icon-pinterest-sign:before       { content: "\f0d3"; }
+.icon-google-plus-sign:before     { content: "\f0d4"; }
+.icon-google-plus:before          { content: "\f0d5"; }
+.icon-money:before                { content: "\f0d6"; }
+.icon-caret-down:before           { content: "\f0d7"; }
+.icon-caret-up:before             { content: "\f0d8"; }
+.icon-caret-left:before           { content: "\f0d9"; }
+.icon-caret-right:before          { content: "\f0da"; }
+.icon-columns:before              { content: "\f0db"; }
+.icon-sort:before                 { content: "\f0dc"; }
+.icon-sort-down:before            { content: "\f0dd"; }
+.icon-sort-up:before              { content: "\f0de"; }
+
+.icon-envelope-alt:before         { content: "\f0e0"; }
+.icon-linkedin:before             { content: "\f0e1"; }
+.icon-undo:before                 { content: "\f0e2"; }
+.icon-legal:before                { content: "\f0e3"; }
+.icon-dashboard:before            { content: "\f0e4"; }
+.icon-comment-alt:before          { content: "\f0e5"; }
+.icon-comments-alt:before         { content: "\f0e6"; }
+.icon-bolt:before                 { content: "\f0e7"; }
+.icon-sitemap:before              { content: "\f0e8"; }
+.icon-umbrella:before             { content: "\f0e9"; }
+.icon-paste:before                { content: "\f0ea"; }
+
+.icon-user-md:before              { content: "\f200"; }
+
+/*====================================================================
+forms.css
+======================================================================
+
+@name           Confused.com Stylguide
+@author         Red Bullet <support@redbullet.co.uk>
+@copyright      Red Bullet 2012
+@description    Form styles
+
+======================================================================
+Contents
+======================================================================
+
+1. FIELDS
+2. TEXT
+3. STATES
+4. LAYOUT
+5. SKINS 
+
+----------*/
+
+  
+/*====================================================================
+1.  Fields
+======================================================================*/
+
+/*  x-browser fixes
+ *  1. Improves appearance and consistency in all browsers
+ *  2. Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ *  3. Removes inner padding and border in FF3+ 
+       www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+
+    button, input, select, textarea {
+        vertical-align: baseline; /* 1 */
+        *vertical-align: middle; /* 1 */
+    }
+    
+    button, input {
+        line-height: inherit; /* 2 */
+    }
+    
+    button::-moz-focus-inner, input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+/* End */
+
+
+/* Base
+========================================================================= */
+
+
+input, select, textarea, button, label {
+    font-family: 'Trebuchet MS',Trebuchet,sans-serif;
+}
+
+input, select, textarea, label {
+    margin:0 0 0 20px;
+    font-size:1.4em;
+    padding:0.4em;
+    /* CSS3 Animation: property duration timing-function delay */
+    -webkit-transition-property: box-shadow, color;
+    -webkit-transition: 0.2s ease-in;
+    transition-property: box-shadow, color;
+    transition: 0.2s ease-in;  
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;     
+}
+
+/* prevent double margin */
+label input {
+    margin:0;
+}
+
+/* Inputs
+========================================================================= */
+
+.prepend-input, .append-input {
+    position:relative;
+    margin-left:20px;
+    display: inline-block;
+}
+
+.js .has-slider {
+    margin-top:2em;
+}
+
+.js .has-slider .prepend-input {
+    display:none;
+}
+
+.add-on {
+    background:#f6f6f6;
+    font-size:1.4em;
+    position: absolute;
+    margin:1px;
+    text-align:center;
+    padding:0.4em 0.7em;
+    border:1px solid #f6f6f6;
+    border-bottom-width:2px;
+    line-height: 0.95em;
+    top:0;
+}
+
+.ie6 .add-on,
+.ie7 .add-on {
+    top:2px;
+}
+
+.ie8 .add-on {
+    padding-top:0.5em;
+}
+
+.prepend-input .add-before {
+    border-radius:3px 0 0 3px;
+    border-right:1px solid #eee;
+    left:0;
+}
+
+input.prepended {
+    margin-left:0;
+    padding-left:2.5em;
+}
+
+.append-input .add-after {
+    border-radius:0 3px 3px 0;
+    border-left:1px solid #eee;
+    right:0;
+}
+
+input.appended {
+    margin-left:0;
+    padding-right:2.5em;
+}
+
+
+
+
+/* SELECTS
+========================================================================= */
+
+select {
+    height: 2.25em; /* x-browser fix to try and get all selects to match the input height */
+    max-width:100%;
+}
+
+
+/* TEXTAREAS
+========================================================================= */
+
+/* x-browser fixes
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+
+    textarea {
+        overflow: auto; /* 1 */
+        vertical-align: top; /* 2 */
+    }
+    
+/* End */
+
+
+/* PASSWORD
+========================================================================= */ 
+
+
+/* SEARCH
+========================================================================= */
+
+/* x-browser fixes
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+
+    input[type="search"] {
+        -webkit-appearance: textfield; /* 1 */
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box; /* 2 */
+        box-sizing: content-box;
+    }
+    
+    /*
+     * Removes inner padding that is displayed in S5, Chrome on OS X
+     */
+    
+    input[type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+    
+/* End */
+
+
+
+/* UPLOADS
+========================================================================= */ 
+
+
+
+/* CHECKBOXES + RADIO BUTTONS
+========================================================================= */
+
+/*  x-browser fixes
+ *  1. Addresses box sizing set to content-box in IE8/9
+ *  2. Removes excess padding in IE8/9
+ */
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        box-sizing: border-box; /* 1 */
+        padding: 0; /* 2 */
+    }
+    
+/* End */
+
+.check, 
+.radio {
+    float:left;
+    border:0;
+    margin-right:0.5em;
+    position:relative;
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus, 
+.check:focus,
+.radio:focus {
+    outline:1px dotted #000a8c;
+}
+
+
+
+/* BUTTONS
+========================================================================= */
+
+/*  x-browser fixes
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+
+    button,
+    input[type="button"], 
+    input[type="reset"], 
+    input[type="submit"] {
+        cursor: pointer; /* 1 */
+        -webkit-appearance: button; /* 2 */
+        *overflow: visible;  /* 3 */
+    }
+    
+/* End */
+
+form .submit {
+    clear:both;
+}
+
+
+/*====================================================================
+2.  Text
+======================================================================*/
+
+/*  x-browser fixes
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects alignment displayed oddly in IE6/7
+ */
+
+    legend {
+        border: 0; /* 1 */
+        *margin-left: -7px; /* 2 */
+    }
+
+/* End */
+
+label {
+    color:#000a8c;
+    padding:0.5em 0;
+    display: block;
+}
+
+
+.fld-tle {
+    font-size:2.1em;
+    margin:0;
+    line-height: 1em;
+}
+
+.fld-lbl {
+   font-size:1.4em;
+   line-height:1.71428571em;
+   padding:0.2em 0;
+}
+
+.fld-msg {
+    font-size:1.2em;
+    margin:0;
+    color:#618A99;
+    clear:both;
+    padding-top:0.2em;
+}
+
+.input-value {
+    display:none;
+    margin-left:1em;
+}
+
+.fld-opt {
+    color:#666;
+}
+
+.toggle-msg {
+    margin-left:1em;
+    display:none;
+}
+
+
+/*====================================================================
+3.  Layout
+======================================================================*/
+
+form {
+    margin:0;
+    padding:0;
+}
+
+fieldset {
+    margin:20px 0 0;
+    padding:0 0 20px;
+    clear: both;
+    border:transparent;
+}
+    
+.form-row {
+    position:relative;
+    float:left;
+    width:100%;
+    clear:both;
+    padding-top:1em;
+}
+    
+.fld {
+    float:left;
+}
+
+.twocol-row { margin-left: 25%;clear:both;}
+.twocol-row .form-row { width: 37%; clear:none;}
+
+
+/*  FIELD WIDTHS
+============================================================================= */
+
+.fld input {
+    
+}
+
+/* 3 characters wide */
+.fld .min {
+    width:3em;
+}
+
+/* 5 characters wide */
+.fld .short {
+    width:5em;
+}
+
+/* 10 characters wide */
+.fld .medium {
+    width:8em;
+}
+
+
+
+
+/*  DATES - Place .date-grp on parent .fld
+============================================================================= */
+
+.date-grp input,
+.date-grp select {
+    float:left;
+    width:3.5em;
+}
+
+.form-row .reminder {
+    margin-left: 10px;
+    font-size: 1.4em;
+    color: #618A99;
+}
+
+.date-grp .fld  {
+    width:8.2em;
+}
+
+.date-grp .fld .fld-lbl {
+    width:auto;
+    padding:0.4em;
+    float:left;
+}
+
+
+
+/*  LABELS TOP - Place .lbl-top on form, .form-row or .fld
+============================================================================= */
+
+.lbl-top .fld-lbl {
+    display:block;
+}
+
+
+
+/*  LABELS LEFT - Place .lbl-left on form, .form-row or .fld
+============================================================================= */
+    
+.lbl-left .fld-lbl {
+    float:left; 
+    width:25%;
+}
+
+.lbl-left .fld .fld-lbl {
+    float:none; 
+    width:100%;
+}
+
+/* Simulate label indent */
+.lbl-left .indent, /* Place on first .fld in a .form-row */
+.lbl-left .submit  {
+    margin-left:27.5%; 
+}
+
+.lbl-left .fld-opt {
+    display: block;
+    position: absolute;
+    left: 31em; /* must match label + input width */
+    text-align: left;
+    top: 0.5em;
+}
+
+
+
+
+/*  LABELS LEFT - Place .lbl-left on form, .form-row or .fld
+============================================================================= */
+
+.align-r .fld-lbl {
+    text-align:right;
+}
+
+
+/*====================================================================
+4.  States
+======================================================================*/
+
+
+/*  Disabled 
+============================================================================= */
+
+fieldset.disabled {
+opacity:0.5;
+box-shadow:none;
+pointer-events: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+cursor: wait;
+background:#fff;
+
+}
+
+input[disabled="disabled"] {
+    background:#eee;
+}
+
+
+/*  Error
+============================================================================= */
+
+.error .fld-msg {
+    color:#cc0000;
+}
+
+.error input,
+.error select, 
+.error textarea,
+input.error,
+select.error,
+textarea.error {
+    border-color:#cc0000;
+}
+
+
+
+/*====================================================================
+5.  Skin
+======================================================================*/
+
+input, select, textarea {
+    border:1px solid #BEE0ED;
+    border-radius:3px;
+    box-shadow:1px 1px transparent, 1px 1px #FFFFFF;
+}
+
+input:focus, select:focus, textarea:focus {
+    box-shadow:inset 0px 1px 3px #ccc; 
+    border:1px solid #01CDFF;
+    color:#000a8c;
+    outline:none;
+}
+
+.no-style,
+.no-style:focus {
+    background:none;
+    width:auto;
+    font-size:inherit;
+    border:0;
+    padding:0;
+    margin:0;
+    line-height:inherit;
+    box-shadow:none;
+    color:inherit;
+    border-radius:0;
+    cursor: inherit;
+    -webkit-transition:none;
+    transition:none;
+}
+
+.box-blue {
+    background:#F4FBFC;
+    border:1px solid #BEE0ED;
+    border-radius:5px;
+    /*background-color: #dbf2ff;
+    border-bottom: 5px solid #00c3ff;*/
+}
+
+.spot {
+    color:#fff;
+    background:#01CDFF;
+    text-shadow:none;
+    border-radius:50%;
+    padding:0.05em 0.4em;
+    font-size:1em;
+    font-weight:normal;
+}
+
+    .complete .spot {background:#53A900;}
+
+    .error .spot {background:#c00;}
+
+    .disabled .spot {background:#BEE0ED;}
+
+/*====================================================================
+typography.css
+======================================================================
+
+@name           Confused.com Stylguide
+@author         Red Bullet <support@redbullet.co.uk>
+@copyright      Red Bullet 2012
+@description    Basic typographic styles
+
+======================================================================
+Contents
+======================================================================
+
+- Brand Colours
+- Notes
+- PX to EM Conversion Table
+- Headings and body copy
+- CMS type
+- Emphasis, address, and abbreviation
+- Blockquotes, pre, code
+- Links
+- Lists
+- Images
+- Lables and badges
+- Comments
+
+======================================================================
+Brand Colours
+======================================================================
+
+@primary    : #000a8c;
+@secondary  : #009933;
+@body       : #545454;
+@highlight  : #126cb1;
+@faint      : #9BBAC9;
+
+======================================================================
+Notes
+======================================================================
+
+Generally padding always goes on top.
+Where padding can't be used (buttons, blockquote) then use margin
+
+======================================================================
+PX to EM Conversion Table
+======================================================================
+
+Font-size(ems)   = Desired font-size(px)     / body font size(px)
+Line-height(ems) = Desired line-height(px)   / current font-size(px)
+
+where possible line-height should be a mutliple of 8
+to maintain the baseline
+
+Font-size       Ems             Line-height     Ems
+------------------------------------------------------------
+10px            1.0em           16px            1.6em
+11px            1.1em           16px            1.45454545em        
+12px            1.2em           16px            1.33333333em
+13px            1.3em           24px            1.84615385em
+14px            1.4em           24px            1.71428571em
+15px            1.5em           24px            1.6em
+16px            1.6em           24px            1.5em
+17px            1.7em           24px            1.41176474em
+18px            1.8em           24px            1.33333333em
+19px            1.9em           24px            1.26315789em
+20px            2.0em           32px            1.6em
+21px            2.1em           32px            1.52380952em
+22px            2.2em           32px            1.45454545em
+23px            2.3em           32px            1.39130435em
+24px            2.4em           32px            1.33333333em
+25px            2.5em           40px            1.6em
+26px            2.6em           40px            1.53846154em
+27px            2.8em           40px            1.48148148em
+28px            2.8em           40px            1.42857143em
+29px            2.9em           40px            1.37931034em
+30px            3.0em           40px            1.33333333em
+
+======================================================================
+Headings and body copy
+======================================================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Trebuchet MS', Trebuchet, sans-serif;
+    color:#000a8c;
+    line-height:1.6em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+pre,
+blockquote {
+    padding: 20px 20px 0 20px;
+    margin:0;
+}
+
+h1 {
+    font-size: 3.0em;
+}
+
+h2 {
+    font-size: 2.4em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1.1em;
+}
+
+p {
+    font-size: 1.4em;
+    line-height: 1.71428571em;
+    padding-top:1.71428571em;
+}
+
+
+small {
+    font-size: 85%;
+}
+
+ins {
+    background: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+q {
+    quotes: none;
+}
+
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+.text-xxl {
+    font-size:4.8em;
+    line-height:1em; /* 64px / 48px */
+}
+
+.text-xl {
+    font-size:4em;
+    line-height:1.33333333em;
+}
+
+.text-l {
+    font-size:3.6em;
+    line-height:1.33333333em; /* 48px / 36px */
+}
+
+.text-m {
+    font-size:2.4em;
+    line-height:1em;
+}
+
+.text-s {
+    font-size:1.2em;
+    line-height:1.3333333em; /* 16px / 12px */
+}
+
+.header-title {
+    font-size:3.1em;
+    line-height:1.6em;
+}
+
+.header-subtitle {
+    font-family: 'Trebuchet MS', Trebuchet, sans-serif;
+    font-size:1.6em;
+    line-height:1em;
+    padding-top:0.5em;
+}
+
+
+/*====================================================================
+CMS type
+======================================================================*/
+
+.cms h1 {
+    line-height: 1.33333333em; /* 40 / 30 */
+    padding-top: 0.8em;
+}
+
+.cms h2 {
+    line-height: 1.33333333em;
+    padding-top: 1em;
+}
+
+.cms h3 {
+    line-height: 1.33333333em;
+    padding-top: 1.33333333em;
+}
+
+.cms h4 {
+    line-height: 1.71428571em;
+    padding-top:1.71428571em;
+}
+
+.cms h5 {
+    line-height: 1.33333333em;
+    padding-top: 2em;
+}
+
+.cms h6 {
+    line-height: 1.45454545em;
+    padding-top: 2.18181818em;
+}
+
+.cms p:last-child {
+    padding-bottom:20px;
+}
+
+
+/*====================================================================
+Emphasis, address, and abbreviation
+======================================================================*/
+
+strong {
+    font-weight:bold;
+}
+
+em {
+    font-style:italic;
+}
+
+abbr {}
+
+abbr[title] {
+    cursor: help;
+    border-bottom: 1px dotted #DDD;
+}
+
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+
+/*====================================================================
+Blockquotes, pre, code
+======================================================================*/
+
+.cms blockquote {
+    border-left: 5px solid #EEE;
+    padding:0 0 1.5em 0;
+    margin:1.5em 20px 0;
+}
+
+pre, 
+code {
+    font-family: monospace, monospace; _font-family: 'courier new', monospace;
+    border-radius: 3px;
+}
+
+pre {
+    background-color: #F5F5F5;
+    border: 1px solid #CCC;
+    display: block;
+    font-size: 1.4em;
+    line-height: 1.71428571em;
+    margin:1.5em 20px 0;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+}
+
+.cms pre {
+    padding-bottom:1.5em;
+}
+
+p code {
+    background-color: #F5F5F5;
+    border: 1px solid #CCC;
+    font-size:1em;
+    padding: 0.2em 0.4em;
+    margin:0 0.1em;
+}
+
+pre code {
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+    padding: 0;
+}
+
+pre p {
+    font-size:1em;
+    margin-bottom:0;
+}
+
+
+/*====================================================================
+Lists
+======================================================================*/
+
+ul,
+ol {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.cms ul,
+.cms ol {
+    font-size: 1.4em;
+    line-height: 1.71428571em;
+    margin-left:1.5em;
+    padding: 20px 20px 0 20px;
+
+}
+
+.cms ul ul,
+.cms ul ol,
+.cms ol ol,
+.cms ol ul {
+    font-size: 1em;
+    padding-top:0;
+}
+
+.cms ul {
+    list-style: disc;
+}
+
+.cms ol {
+    list-style: decimal;
+}
+
+.cms ul.unstyled,
+.cms ol.unstyled {
+    margin-left: 0;
+    list-style: none;
+}
+
+.cms dl {
+    font-size: 1.4em;
+    line-height: 1.71428571em;
+    margin-bottom: 1.71428571em;
+}
+
+.ticks li {
+    background: url('../images/icons/tick_green.png.html') left top no-repeat;
+    padding: 3px 0 5px 30px;
+    line-height:1em;
+    margin-left:0;
+    margin-top:10px;
+    list-style-type:none;
+}
+
+.cms .ticks {
+    margin-left:0;
+}
+
+.cms .ticks ul {
+    padding-top:5px;
+}
+
+.arrow-list li {
+    padding:0 20px;
+}
+
+
+/*====================================================================
+Images
+======================================================================*/
+
+.cms .alignleft {
+    float:left;
+    padding-right:20px;
+}
+
+.cms .alignright {
+    float:right;
+    padding-left:20px;
+}
+
+
+/*====================================================================
+Alerts, labels and badges
+======================================================================*/
+
+.badge,
+.label {
+    background-color: #999;
+    color: #FFF;
+    font-size:90%;
+    padding: 0.2em 0.4em;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 3px;
+}
+
+.success {
+    background-color:#51B94C;
+}
+
+.warning {
+    background-color: #F89406;
+}
+
+.important {
+    background-color: #B94A48;
+}
+
+.info {
+    background-color: #3A87AD;
+}
+
+.inverse {
+    background-color: #333;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width:100%;
+}
+
+td,th {
+    vertical-align: top;
+}
+
+/*====================================================================
+layout.css
+======================================================================
+
+@name           Confused.com Stylguide
+@author         Red Bullet <support@redbullet.co.uk>
+@copyright      Red Bullet 2012
+@description    Ensure everyone starts in the same place
+
+======================================================================
+Contents
+======================================================================
+
+- BASIC
+- GRID
+
+/*====================================================================
+BASIC LAYOUT
+======================================================================*/
+
+
+
+/*====================================================================
+GRID LAYOUT
+======================================================================*/
+
+.grid {float:left;}
+
+/*
+* WIDTH CONTROLLERS
+* Place on the element with along with .grid
+*/
+
+.g-1   {width:100%;}
+.g-1-2 {width:50%;}
+.g-1-3 {width:33.3333333%;} 
+.g-2-3 {width:66.666666%;}
+.g-1-4 {width:25%;} 
+.g-3-4 {width:75%;}
+.g-1-5 {width:20%;} 
+.g-2-5 {width:40%;} 
+.g-3-5 {width:60%;} 
+.g-4-5 {width:80%;}
+.g-1-6 {width:16.6666667%;} 
+
+
+/*
+* SPACING CONTROLLERS
+* Helper classes to make comlpex grids to line up.
+*/
+
+/* Wrapper class for parent container with mulitple .box */
+.box-wrap { 
+    padding:9px; 
+    overflow:hidden;
+} 
+
+/* Wrapper class for parent container with mulitple .grid */
+.grid-wrap { 
+    padding:10px; 
+    overflow:hidden;
+} 
+
+/*
+* GRID FIXES
+* Modify margin/padding in certain scenarios.
+*/
+
+.box-wrap .grid .box {
+    margin:10px;
+}
+
+.grid .box {
+    margin:10px; 
+    margin-bottom:20px;
+}
+
+
+/*====================================================================
+Quote Header
+======================================================================*/
+
+.quote-header {
+    clear:both;
+    text-align:center;
+    position:relative;
+    min-height: 120px;
+    padding: 0 140px;
+
+    /* use a class to add bg image e.g. (.energy-header) image must be */
+    background:no-repeat right center;
+}
+
+.quote-header #logo {
+    position:absolute;
+    left:20px;
+    top:50%; /* Center the logo vertically */
+    margin-top:-45px;
+}
+
+
+.energy-header {
+    background-image:url("../styleguide/images/energy/energy_dual-fuel.jpg.html");
+}
+
+/*====================================================================
+navigation.css
+======================================================================
+
+@name           Confused.com Stylguide
+@author         Red Bullet <support@redbullet.co.uk>
+@copyright      Red Bullet 2012
+@description    Ensure everyone starts in the same place
+
+======================================================================
+Contents
+======================================================================
+
+- Tabs
+- Panels
+- Menus
+    - Results Top Nav
+
+/*====================================================================
+Tabs
+======================================================================*/
+
+.tab-nav {
+    padding:20px 20px 0 20px;
+}
+
+.tab-nav .btn {
+    margin-top:5px;
+}
+
+.tab-nav li {
+    float:left;
+}
+
+.ui-tabs .ui-tabs-hide {
+    display:none;
+}
+
+.ui-state-active a,
+.ui-state-active a:hover {
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);        
+}
+
+.tab-content {
+    clear:both;
+}
+
+.arrow-tabs .ui-state-active a:after, .ui-state-active a:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.arrow-tabs .ui-state-active a:after {
+    border-top-color: #FFFFFF;
+    border-width: 10px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.arrow-tabs .ui-state-active a:before {
+    border-top-color: inherit;
+    border-width: 11px;
+    left: 50%;
+    margin-left: -11px;
+        
+}
+
+.section-title {
+    padding-top:40px;
+    padding-bottom:20px;
+}
+
+/*====================================================================
+Tabs
+======================================================================*/
+
+.nav-panel {
+    margin-left:5px;
+    margin-right:5px;
+}
+
+.nav-panel li {
+    border-bottom:1px solid #BEE0ED; /* Needs to be inherited from the skin */
+}
+
+.nav-panel li a {
+    display:block;
+    font-size:1.6em;
+    padding:10px 20px;
+}
+
+.nav-panel li a .saving {
+    font-weight:bold;
+}
+
+.nav-panel li a:hover,
+.nav-panel li a:focus {
+    background:; /* Needs to be inherited from the skin */
+    text-decoration:none;
+}
+
+.nav-panel .title {
+    font-size:2.4em;
+    line-height:1.33333333em;
+    margin-bottom:10px;
+    padding-top:10px;
+}
+
+/*====================================================================
+Menus - Top Bar Navigation
+======================================================================*/
+
+#topbar {
+    background:#F4FBFC;
+    float: left;
+    font-size:1.3em;
+    width:100%;
+}
+
+
+.navigation-list {
+    list-style:none;
+    margin:0;
+}
+
+.navigation-list li {
+    float: left;
+    display:block;
+    padding:10px 15px 10px 0;
+}
+
+/*====================================================================
+skin.css
+======================================================================
+
+@name           Confused.com Stylguide
+@author         Red Bullet <support@redbullet.co.uk>
+@copyright      Red Bullet 2012
+@description    Override default colours across the site
+
+======================================================================
+Contents
+======================================================================
+
+- Typography
+- Buttons
+- Navigation
+- Tables
+- Navigation
+- Boxes
+
+/*====================================================================
+Typography
+======================================================================*/
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Trebuchet MS',Trebuchet,sans-serif;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted #DDD;
+}
+
+blockquote {
+    border-left: 5px solid #EEE;
+}
+
+.text-secondary {
+    color:#009933;
+}
+
+.text-faint {
+    color: #9BBAC9;
+}
+
+
+/*====================================================================
+Buttons
+======================================================================*/
+
+
+
+
+/*====================================================================
+Navigation
+======================================================================*/
+
+
+
+
+/*====================================================================
+Forms
+======================================================================*/
+
+button,
+input,
+select,
+textarea {
+    color: #222;
+    font-family:'Trebuchet MS',Trebuchet,sans-serif;
+}
+
+
+/*====================================================================
+Tables
+======================================================================*/
+
+
+
+
+/*====================================================================
+Icons & Graphics
+======================================================================*/
+
+
+/*====================================================================
+Boxes
+======================================================================*/
+
+.box {
+    border:1px solid #BEE0ED;
+    margin-top:20px;
+    position:relative;
+    background:#fff;
+    border-radius: 5px;
+}
+
+.nav-panel {
+    background:#F4FBFC;
+}
+
+/*
+ColorBox Core Style:
+The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+/* #cboxLoadedContent{overflow:auto;} */
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box;}
+
+/* 
+User Style:
+Change the following styles to modify the appearance of ColorBox.  They are
+ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url(../images/colorbox/overlay.png) repeat 0 0;}
+#colorbox{}
+#cboxTopLeft{width:21px; height:21px; background:url(../images/colorbox/controls.png) no-repeat -101px 0;}
+#cboxTopRight{width:21px; height:21px; background:url(../images/colorbox/controls.png) no-repeat -130px 0;}
+#cboxBottomLeft{width:21px; height:21px; background:url(../images/colorbox/controls.png) no-repeat -101px -29px;}
+#cboxBottomRight{width:21px; height:21px; background:url(../images/colorbox/controls.png) no-repeat -130px -29px;}
+#cboxMiddleLeft{width:21px; background:url(../images/colorbox/controls.png) left top repeat-y;}
+#cboxMiddleRight{width:21px; background:url(../images/colorbox/controls.png) right top repeat-y;}
+#cboxTopCenter{height:21px; background:url(../images/colorbox/border.png) 0 0 repeat-x;}
+#cboxBottomCenter{height:21px; background:url(../images/colorbox/border.png) 0 -29px repeat-x;}
+#cboxContent{background:#fff;}
+    .cboxIframe{background:#fff;}
+    #cboxError{padding:50px; border:1px solid #ccc;}
+    #cboxLoadedContent{margin-bottom:28px;}
+    #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+    #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+    #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+    #cboxPrevious{position:absolute; bottom:0; left:0; background:url(../images/colorbox/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+    #cboxPrevious:hover{background-position:-75px -25px;}
+    #cboxNext{position:absolute; bottom:0; left:27px; background:url(../images/colorbox/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+    #cboxNext:hover{background-position:-50px -25px;}
+    #cboxLoadingOverlay{background:url(../images/colorbox/loading_background.png) no-repeat center center;}
+    #cboxLoadingGraphic{background:url(../images/colorbox/loading.gif) no-repeat center center;}
+    #cboxClose{position:absolute; bottom:0; right:0; background:url(../images/colorbox/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+    #cboxClose:hover{background-position:-25px -25px;}
+
+/*
+The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/*
+The following provides PNG transparency support for IE6
+Feel free to remove this and the /ie6/ directory if you have dropped IE6 support.
+*/
+.cboxIE6 #cboxTopLeft{background:url(../images/colorbox/ie6/borderTopLeft.png);}
+.cboxIE6 #cboxTopCenter{background:url(../images/colorbox/ie6/borderTopCenter.png);}
+.cboxIE6 #cboxTopRight{background:url(../images/colorbox/ie6/borderTopRight.png);}
+.cboxIE6 #cboxBottomLeft{background:url(../images/colorbox/ie6/borderBottomLeft.png);}
+.cboxIE6 #cboxBottomCenter{background:url(../images/colorbox/ie6/borderBottomCenter.png);}
+.cboxIE6 #cboxBottomRight{background:url(../images/colorbox/ie6/borderBottomRight.png);}
+.cboxIE6 #cboxMiddleLeft{background:url(../images/colorbox/ie6/borderMiddleLeft.png);}
+.cboxIE6 #cboxMiddleRight{background:url(../images/colorbox/ie6/borderMiddleRight.png);}
+
+.cboxIE6 #cboxTopLeft,
+.cboxIE6 #cboxTopCenter,
+.cboxIE6 #cboxTopRight,
+.cboxIE6 #cboxBottomLeft,
+.cboxIE6 #cboxBottomCenter,
+.cboxIE6 #cboxBottomRight,
+.cboxIE6 #cboxMiddleLeft,
+.cboxIE6 #cboxMiddleRight {
+_behavior: expression(this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1], this.style.background = "none", this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ", sizingMethod='scale')");
+}
+
+/*====================================================================
+Customisation
+======================================================================*/
+
+.cboxIframe {
+overflow:auto;
+float:left;
+display:block;
+}
+
+#cboxOverlay {background:#fff;}
+
+#cboxContent {
+box-shadow:0px 3px 10px rgba(0,0,0,0.25);
+border-radius:5px;
+border: 1px solid #BEE0ED;
+}
+
+#cboxTopLeft,
+#cboxTopRight,
+#cboxBottomLeft,
+#cboxBottomRight,
+#cboxMiddleLeft,
+#cboxMiddleRight,
+#cboxTopCenter,
+#cboxBottomCenter {
+background:none;
+}
+
+#cboxLoadedContent {
+margin-bottom:0;
+margin-top: 20px;
+overflow:auto;
+-webkit-overflow-scrolling:touch;
+position:relative;
+border-radius: 5px;
+}
+
+.results #cboxLoadedContent {
+margin-top: 0px;
+}
+
+
+#cboxClose {
+width:24px;
+height:24px;
+top:-12px;
+right:-12px;
+border:1px solid #049AB5;
+color:#fff;
+border-radius: 2em;
+box-shadow:0 1px 1px #FFFFFF inset;
+background: #01cdff;
+}
+
+#cboxClose:hover {
+box-shadow:0 1px 2px #FFFFFF inset, 0px 1px 3px rgba(0,0,0,0.3);
+}
+
+#cboxClose:before {
+content:'x';
+display: block;
+text-align: center;
+font-size: 20px;
+left: 0;
+position: absolute;
+text-align: center;
+text-indent:7px;
+top: 0;
+line-height: 22px;
+}
+
+.ie6 #cboxClose,
+.ie7 #cboxClose {
+background:#01CDFF url('../images/colorbox/btn-close.png') no-repeat center center !important;
+}
+
+/* Prevent loading modal from scrolling with the page */
+.results #colorbox {position: fixed !important;}
+
+/* Undo fixed for old browsers */
+.ie6 .results #colorbox,
+.ie7 .results #colorbox  {
+position: static !important;
+}
+.cic-information p {font-size:1.6em;}
+
+/*.DataProtection.thankyou-popup h3{ padding: 2px;}*/
+@media (max-width: 600px) {
+    .DataProtection.thankyou-popup h3 {padding: 0; width: 100%; }
+}
